@@ -1,6 +1,7 @@
 package prova2;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class telaMenu extends javax.swing.JFrame {
@@ -13,6 +14,12 @@ public class telaMenu extends javax.swing.JFrame {
     String modo_p;
     String modo_c;
     
+    String medico_crm;
+    String medico_nome;
+    
+    String paciente_cpf;
+    String paciente_nome;
+    
     public void ManipulaInterface_m(){
         
         switch(modo_m){
@@ -20,6 +27,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_m_Novo.setEnabled(true);
                 btn_m_Editar.setEnabled(false);
                 btn_m_Excluir.setEnabled(false);
+                btn_m_Pesquisar.setEnabled(true);
                 
                 btn_m_Salvar.setEnabled(false);
                 btn_m_Cancelar.setEnabled(false);
@@ -35,6 +43,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_m_Novo.setEnabled(false);
                 btn_m_Editar.setEnabled(false);
                 btn_m_Excluir.setEnabled(false);
+                btn_m_Pesquisar.setEnabled(false);
                 
                 btn_m_Salvar.setEnabled(true);
                 btn_m_Cancelar.setEnabled(true);
@@ -50,6 +59,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_m_Novo.setEnabled(true);
                 btn_m_Editar.setEnabled(false);
                 btn_m_Excluir.setEnabled(false);
+                btn_m_Pesquisar.setEnabled(false);
                 
                 btn_m_Salvar.setEnabled(true);
                 btn_m_Cancelar.setEnabled(true);
@@ -65,6 +75,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_m_Novo.setEnabled(true);
                 btn_m_Editar.setEnabled(false);
                 btn_m_Excluir.setEnabled(false);
+                btn_m_Pesquisar.setEnabled(false);
                 
                 btn_m_Salvar.setEnabled(false);
                 btn_m_Cancelar.setEnabled(false);
@@ -80,6 +91,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_m_Novo.setEnabled(true);
                 btn_m_Editar.setEnabled(true);
                 btn_m_Excluir.setEnabled(true);
+                btn_m_Pesquisar.setEnabled(false);
                 
                 btn_m_Salvar.setEnabled(false);
                 btn_m_Cancelar.setEnabled(false);
@@ -116,6 +128,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_p_Novo.setEnabled(true);
                 btn_p_Editar.setEnabled(false);
                 btn_p_Excluir.setEnabled(false);
+                btn_p_Pesquisar.setEnabled(true);
                 
                 btn_p_Salvar.setEnabled(false);
                 btn_p_Cancelar.setEnabled(false);
@@ -129,6 +142,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_p_Novo.setEnabled(false);
                 btn_p_Editar.setEnabled(false);
                 btn_p_Excluir.setEnabled(false);
+                btn_p_Pesquisar.setEnabled(false);
                 
                 btn_p_Salvar.setEnabled(true);
                 btn_p_Cancelar.setEnabled(true);
@@ -142,6 +156,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_p_Novo.setEnabled(true);
                 btn_p_Editar.setEnabled(false);
                 btn_p_Excluir.setEnabled(false);
+                btn_p_Pesquisar.setEnabled(false);
                 
                 btn_p_Salvar.setEnabled(true);
                 btn_p_Cancelar.setEnabled(true);
@@ -155,6 +170,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_p_Novo.setEnabled(true);
                 btn_p_Editar.setEnabled(false);
                 btn_p_Excluir.setEnabled(false);
+                btn_p_Pesquisar.setEnabled(false);
                 
                 btn_p_Salvar.setEnabled(false);
                 btn_p_Cancelar.setEnabled(false);
@@ -168,6 +184,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_p_Novo.setEnabled(true);
                 btn_p_Editar.setEnabled(true);
                 btn_p_Excluir.setEnabled(true);
+                btn_p_Pesquisar.setEnabled(false);
                 
                 btn_p_Salvar.setEnabled(false);
                 btn_p_Cancelar.setEnabled(false);
@@ -200,6 +217,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_c_Novo.setEnabled(true);
                 btn_c_Editar.setEnabled(false);
                 btn_c_Excluir.setEnabled(false);
+                btn_c_Pesquisar.setEnabled(true);
                 
                 btn_c_Salvar.setEnabled(false);
                 btn_c_Cancelar.setEnabled(false);
@@ -216,6 +234,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_c_Novo.setEnabled(false);
                 btn_c_Editar.setEnabled(false);
                 btn_c_Excluir.setEnabled(false);
+                btn_c_Pesquisar.setEnabled(false);
                 
                 btn_c_Salvar.setEnabled(true);
                 btn_c_Cancelar.setEnabled(true);
@@ -232,6 +251,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_c_Novo.setEnabled(true);
                 btn_c_Editar.setEnabled(false);
                 btn_c_Excluir.setEnabled(false);
+                btn_c_Pesquisar.setEnabled(false);
                 
                 btn_c_Salvar.setEnabled(true);
                 btn_c_Cancelar.setEnabled(true);
@@ -248,6 +268,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_c_Novo.setEnabled(true);
                 btn_c_Editar.setEnabled(false);
                 btn_c_Excluir.setEnabled(false);
+                btn_c_Pesquisar.setEnabled(false);
                 
                 btn_c_Salvar.setEnabled(false);
                 btn_c_Cancelar.setEnabled(false);
@@ -264,6 +285,7 @@ public class telaMenu extends javax.swing.JFrame {
                 btn_c_Novo.setEnabled(true);
                 btn_c_Editar.setEnabled(true);
                 btn_c_Excluir.setEnabled(true);
+                btn_c_Pesquisar.setEnabled(false);
                 
                 btn_c_Salvar.setEnabled(false);
                 btn_c_Cancelar.setEnabled(false);
@@ -336,6 +358,7 @@ public class telaMenu extends javax.swing.JFrame {
         btn_m_Editar = new javax.swing.JButton();
         btn_m_Novo = new javax.swing.JButton();
         btn_m_Excluir = new javax.swing.JButton();
+        btn_m_Pesquisar = new javax.swing.JButton();
         abaPacientes = new javax.swing.JPanel();
         lblCpfP = new javax.swing.JLabel();
         input_p_Cpf = new javax.swing.JTextField();
@@ -350,6 +373,7 @@ public class telaMenu extends javax.swing.JFrame {
         btn_p_Novo = new javax.swing.JButton();
         btn_p_Editar = new javax.swing.JButton();
         btn_p_Excluir = new javax.swing.JButton();
+        btn_p_Pesquisar = new javax.swing.JButton();
         abaConsultas = new javax.swing.JPanel();
         lbl_c_Codigo = new javax.swing.JLabel();
         input_c_Codigo = new javax.swing.JTextField();
@@ -370,6 +394,7 @@ public class telaMenu extends javax.swing.JFrame {
         btn_c_Novo = new javax.swing.JButton();
         btn_c_Editar = new javax.swing.JButton();
         btn_c_Excluir = new javax.swing.JButton();
+        btn_c_Pesquisar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -464,6 +489,13 @@ public class telaMenu extends javax.swing.JFrame {
             }
         });
 
+        btn_m_Pesquisar.setText("PESQUISAR");
+        btn_m_Pesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_m_PesquisarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout abaMedicosLayout = new javax.swing.GroupLayout(abaMedicos);
         abaMedicos.setLayout(abaMedicosLayout);
         abaMedicosLayout.setHorizontalGroup(
@@ -500,11 +532,12 @@ public class telaMenu extends javax.swing.JFrame {
                                 .addComponent(input_m_Crm, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(61, 61, 61))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaMedicosLayout.createSequentialGroup()
-                        .addGroup(abaMedicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_m_Excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(abaMedicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btn_m_Pesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_m_Novo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btn_m_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_m_Novo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(74, 74, 74)))
+                            .addComponent(btn_m_Excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(88, 88, 88)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         abaMedicosLayout.setVerticalGroup(
@@ -534,7 +567,9 @@ public class telaMenu extends javax.swing.JFrame {
                 .addGroup(abaMedicosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_m_Salvar)
                     .addComponent(btn_m_Cancelar))
-                .addGap(43, 43, 43)
+                .addGap(9, 9, 9)
+                .addComponent(btn_m_Pesquisar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_m_Novo)
                 .addGap(18, 18, 18)
                 .addComponent(btn_m_Editar)
@@ -617,6 +652,13 @@ public class telaMenu extends javax.swing.JFrame {
             }
         });
 
+        btn_p_Pesquisar.setText("PESQUISAR");
+        btn_p_Pesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_p_PesquisarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout abaPacientesLayout = new javax.swing.GroupLayout(abaPacientes);
         abaPacientes.setLayout(abaPacientesLayout);
         abaPacientesLayout.setHorizontalGroup(
@@ -642,10 +684,11 @@ public class telaMenu extends javax.swing.JFrame {
                             .addComponent(input_p_Endereco)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, abaPacientesLayout.createSequentialGroup()
                         .addGap(63, 63, 63)
-                        .addGroup(abaPacientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_p_Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_p_Novo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_p_Excluir, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(abaPacientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btn_p_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_p_Novo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_p_Excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_p_Pesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, abaPacientesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btn_p_Salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -673,9 +716,11 @@ public class telaMenu extends javax.swing.JFrame {
                 .addGroup(abaPacientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_p_Salvar)
                     .addComponent(btn_p_Cancelar))
-                .addGap(42, 42, 42)
+                .addGap(16, 16, 16)
+                .addComponent(btn_p_Pesquisar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_p_Novo)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(btn_p_Editar)
                 .addGap(18, 18, 18)
                 .addComponent(btn_p_Excluir)
@@ -774,6 +819,8 @@ public class telaMenu extends javax.swing.JFrame {
             }
         });
 
+        btn_c_Pesquisar.setText("PESQUISAR");
+
         javax.swing.GroupLayout abaConsultasLayout = new javax.swing.GroupLayout(abaConsultas);
         abaConsultas.setLayout(abaConsultasLayout);
         abaConsultasLayout.setHorizontalGroup(
@@ -806,9 +853,10 @@ public class telaMenu extends javax.swing.JFrame {
                     .addGroup(abaConsultasLayout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addGroup(abaConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_c_Excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_c_Pesquisar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btn_c_Novo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_c_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btn_c_Editar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_c_Excluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -844,11 +892,13 @@ public class telaMenu extends javax.swing.JFrame {
                 .addGroup(abaConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_c_Salvar)
                     .addComponent(btn_c_Cancelar))
-                .addGap(18, 18, 18)
+                .addGap(3, 3, 3)
+                .addComponent(btn_c_Pesquisar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_c_Novo)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_c_Editar)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_c_Excluir)
                 .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abaConsultasLayout.createSequentialGroup()
@@ -1166,6 +1216,69 @@ public class telaMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tableConsultasMouseClicked
 
+    private void btn_m_PesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_m_PesquisarActionPerformed
+        
+        medico_nome = JOptionPane.showInputDialog("Digite o nome ou tecle Enter para filtrar por CRM: ");
+        medico_crm = JOptionPane.showInputDialog("Digite o CRM: ");
+        
+        if (!medico_nome.equals("")){ // Caso queira filtrar por nome
+            for (int i = 0; i < listaMedicos.size(); i++){  // Percorre o Array
+                String nome = listaMedicos.get(i).getNome_m(); // Seta os nomes para verificar abaixo
+                if (medico_nome.equals(nome)){ // Caso encontre um nome igual
+                    Medicos M = listaMedicos.get(i); // Preenche os campos com os dados do médico
+                    input_m_Cpf.setText(M.getCpf_m()); //
+                    input_m_Nome.setText(M.getNome_m()); //
+                    input_m_Endereco.setText(M.getEndereco_m()); //
+                    input_m_Crm.setText(M.getCrm_m()); //
+                    input_m_Status.setText(M.getStatus_m()); //
+                    break;
+                }
+            }
+        } else if ( medico_nome.equals("") && !medico_crm.equals("")){ // Caso queira filtrar por CRM
+            for (int i = 0; i < listaMedicos.size(); i++){  // Percorre o Array
+                String crm = listaMedicos.get(i).getCrm_m(); // Seta os CRMs para verificar abaixo
+                if (medico_crm.equals(crm)){ // Caso encontre um CRM igual
+                    Medicos M = listaMedicos.get(i); // Preenche os campos com os dados do médico
+                    input_m_Cpf.setText(M.getCpf_m()); //
+                    input_m_Nome.setText(M.getNome_m()); //
+                    input_m_Endereco.setText(M.getEndereco_m()); //
+                    input_m_Crm.setText(M.getCrm_m()); //
+                    input_m_Status.setText(M.getStatus_m()); //
+                    break;
+                }
+            }
+        }
+    }//GEN-LAST:event_btn_m_PesquisarActionPerformed
+
+    private void btn_p_PesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_p_PesquisarActionPerformed
+        paciente_nome = JOptionPane.showInputDialog("Digite o nome ou tecle Enter para filtrar por CPF: ");
+        paciente_cpf = JOptionPane.showInputDialog("Digite o CPF: ");
+        
+        if (!paciente_nome.equals("")){ // Caso queira filtrar por nome
+            for (int i = 0; i < listaPacientes.size(); i++){  // Percorre o Array
+                String nome = listaPacientes.get(i).getNome_p(); // Seta os nomes para verificar abaixo
+                if (paciente_nome.equals(nome)){ // Caso encontre um nome igual
+                    Pacientes P = listaPacientes.get(i); // Preenche os campos com os dados do médico
+                    input_p_Cpf.setText(P.getCpf_p()); //
+                    input_p_Nome.setText(P.getNome_p()); //
+                    input_p_Endereco.setText(P.getEndereco_p()); //
+                    break;
+                }
+            }
+        } else if ( paciente_nome.equals("") && !paciente_cpf.equals("")){ // Caso queira filtrar por CPF
+            for (int i = 0; i < listaPacientes.size(); i++){  // Percorre o Array
+                String cpf = listaPacientes.get(i).getCpf_p(); // Seta os CPFs para verificar abaixo
+                if (paciente_cpf.equals(cpf)){ // Caso encontre um CPF igual
+                    Pacientes P = listaPacientes.get(i); // Preenche os campos com os dados do médico
+                    input_p_Cpf.setText(P.getCpf_p()); //
+                    input_p_Nome.setText(P.getNome_p()); //
+                    input_p_Endereco.setText(P.getEndereco_p()); //
+                    break;
+                }
+            }
+        }
+    }//GEN-LAST:event_btn_p_PesquisarActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1207,16 +1320,19 @@ public class telaMenu extends javax.swing.JFrame {
     private javax.swing.JButton btn_c_Editar;
     private javax.swing.JButton btn_c_Excluir;
     private javax.swing.JButton btn_c_Novo;
+    private javax.swing.JButton btn_c_Pesquisar;
     private javax.swing.JButton btn_c_Salvar;
     private javax.swing.JButton btn_m_Cancelar;
     private javax.swing.JButton btn_m_Editar;
     private javax.swing.JButton btn_m_Excluir;
     private javax.swing.JButton btn_m_Novo;
+    private javax.swing.JButton btn_m_Pesquisar;
     private javax.swing.JButton btn_m_Salvar;
     private javax.swing.JButton btn_p_Cancelar;
     private javax.swing.JButton btn_p_Editar;
     private javax.swing.JButton btn_p_Excluir;
     private javax.swing.JButton btn_p_Novo;
+    private javax.swing.JButton btn_p_Pesquisar;
     private javax.swing.JButton btn_p_Salvar;
     private javax.swing.JTextField input_c_Codigo;
     private javax.swing.JTextField input_c_Cpf;

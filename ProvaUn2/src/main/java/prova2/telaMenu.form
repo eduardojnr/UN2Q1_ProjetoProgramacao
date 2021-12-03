@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -107,12 +107,13 @@
                                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="btn_m_Excluir" max="32767" attributes="0"/>
-                                      <Component id="btn_m_Editar" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="btn_m_Novo" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="btn_m_Pesquisar" max="32767" attributes="0"/>
+                                      <Component id="btn_m_Novo" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btn_m_Editar" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btn_m_Excluir" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jScrollPane1" min="-2" pref="364" max="-2" attributes="0"/>
@@ -152,7 +153,9 @@
                               <Component id="btn_m_Salvar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btn_m_Cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Component id="btn_m_Pesquisar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btn_m_Novo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btn_m_Editar" min="-2" max="-2" attributes="0"/>
@@ -300,6 +303,14 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_m_ExcluirActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JButton" name="btn_m_Pesquisar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="PESQUISAR"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_m_PesquisarActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="abaPacientes">
@@ -342,10 +353,11 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="btn_p_Editar" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="btn_p_Novo" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="btn_p_Excluir" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btn_p_Editar" max="32767" attributes="0"/>
+                                      <Component id="btn_p_Novo" max="32767" attributes="0"/>
+                                      <Component id="btn_p_Excluir" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="btn_p_Pesquisar" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -383,9 +395,11 @@
                               <Component id="btn_p_Salvar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btn_p_Cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <Component id="btn_p_Pesquisar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btn_p_Novo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btn_p_Editar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btn_p_Excluir" min="-2" max="-2" attributes="0"/>
@@ -499,6 +513,14 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_p_ExcluirActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JButton" name="btn_p_Pesquisar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="PESQUISAR"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_p_PesquisarActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="abaConsultas">
@@ -547,9 +569,10 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="btn_c_Excluir" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="btn_c_Pesquisar" max="32767" attributes="0"/>
                                       <Component id="btn_c_Novo" alignment="0" max="32767" attributes="0"/>
                                       <Component id="btn_c_Editar" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="btn_c_Excluir" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -597,11 +620,13 @@
                               <Component id="btn_c_Salvar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btn_c_Cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          <Component id="btn_c_Pesquisar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="btn_c_Novo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btn_c_Editar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btn_c_Excluir" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="24" max="32767" attributes="0"/>
                       </Group>
@@ -760,6 +785,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_c_ExcluirActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btn_c_Pesquisar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="PESQUISAR"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
