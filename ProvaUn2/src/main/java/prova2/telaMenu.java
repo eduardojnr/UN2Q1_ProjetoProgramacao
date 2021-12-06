@@ -953,11 +953,23 @@ public class telaMenu extends javax.swing.JFrame {
     private void btn_m_SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_m_SalvarActionPerformed
         
         if (modo_m.equals("Novo")){
-            Medicos M = new Medicos(input_m_Crm.getText(), input_m_Cpf.getText(), input_m_Nome.getText(), 
+            if (listaMedicos.isEmpty()){
+                Medicos M = new Medicos(input_m_Crm.getText(), input_m_Cpf.getText(), input_m_Nome.getText(), 
                                     input_m_Endereco.getText(), input_m_Status.getText());
-            
-            listaMedicos.add(M);
-        
+                listaMedicos.add(M);
+            } else {
+                for (int i = 0; i < listaMedicos.size(); i++){
+                    String crm_m = listaMedicos.get(i).getCrm_m();
+                    String cpf_m = listaMedicos.get(i).getCpf_m();
+                    if (!input_m_Crm.getText().equals(crm_m) &&
+                        !input_m_Cpf.getText().equals(cpf_m)){
+                        Medicos M = new Medicos(input_m_Crm.getText(), input_m_Cpf.getText(), input_m_Nome.getText(), 
+                                        input_m_Endereco.getText(), input_m_Status.getText());
+                        listaMedicos.add(M);
+                        break;
+                    }
+                }
+            }
         } else if (modo_m.equals("Editar")){
             
             int index = tableMedicos.getSelectedRow();
@@ -1072,10 +1084,19 @@ public class telaMenu extends javax.swing.JFrame {
     private void btn_p_SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_p_SalvarActionPerformed
         
         if (modo_p.equals("Novo")){
-            Pacientes P = new Pacientes(input_p_Cpf.getText(), input_p_Nome.getText(), input_p_Endereco.getText());
-            
-            listaPacientes.add(P);
-        
+            if (listaPacientes.isEmpty()){
+                Pacientes P = new Pacientes(input_p_Cpf.getText(), input_p_Nome.getText(), input_p_Endereco.getText());
+                listaPacientes.add(P);
+            } else {
+                for (int i = 0; i < listaPacientes.size(); i++){
+                    String cpf_p = listaPacientes.get(i).getCpf_p();
+                    if (!input_p_Cpf.getText().equals(cpf_p)){
+                        Pacientes P = new Pacientes(input_p_Cpf.getText(), input_p_Nome.getText(), input_p_Endereco.getText());
+                        listaPacientes.add(P);
+                        break;
+                    }
+                }
+            }
         } else if (modo_p.equals("Editar")){
             
             int index = tablePacientes.getSelectedRow();
