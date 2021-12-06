@@ -1143,11 +1143,21 @@ public class telaMenu extends javax.swing.JFrame {
 
     private void btn_c_SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_c_SalvarActionPerformed
         if (modo_c.equals("Novo")){
-            Consultas C = new Consultas(input_c_Codigo.getText(), input_c_Data.getText(), input_c_Horario.getText(), 
-                                    input_c_Crm.getText(), input_c_Cpf.getText(), input_c_Status.getText());
+            for (int i = 0; i < listaMedicos.size(); i++){
+                String crm = listaMedicos.get(i).getCrm_m();
+                if (input_c_Crm.getText().equals(crm)){
+                    for (int u = 0; u < listaPacientes.size(); u++){
+                        String cpf = listaPacientes.get(u).getCpf_p();
+                        if (input_c_Cpf.getText().equals(cpf)){
+                            Consultas C = new Consultas(input_c_Codigo.getText(), input_c_Data.getText(), input_c_Horario.getText(), 
+                                                        input_c_Crm.getText(), input_c_Cpf.getText(), input_c_Status.getText());
+                            listaConsultas.add(C);
+                            break;
+                        }
+                    }
+                }
+            }
             
-            listaConsultas.add(C);
-        
         } else if (modo_c.equals("Editar")){
             
             int index = tableConsultas.getSelectedRow();
@@ -1157,10 +1167,8 @@ public class telaMenu extends javax.swing.JFrame {
             listaConsultas.get(index).setHorario_consulta(input_c_Horario.getText());
             listaConsultas.get(index).setCrm_consulta(input_c_Crm.getText());
             listaConsultas.get(index).setCpf_consulta(input_c_Cpf.getText());
-            listaConsultas.get(index).setStatus_consulta(input_c_Status.getText());
-            
+            listaConsultas.get(index).setStatus_consulta(input_c_Status.getText());   
         }
-        
         tabelaConsultas();
         
         modo_c = "Navegar";
